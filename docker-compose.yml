@@ -11,10 +11,10 @@ services:
       context: ./server
       dockerfile: Dockerfile
     ports:
-      - "4000:4000"
+      - "${SERVER_PORT}:4000"
   frontend:
     build:
       context: ./client
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "${CLIENT_PORT}:3000"
