@@ -1,11 +1,5 @@
-import express from 'express';
+import Server from "./infraestructure/server/server.js";
 
-const app = express();
+const server = new Server(4000)
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
-app.listen(4000, () => {
-  console.log('Server listening on port 4000');
-});
+server.start();
